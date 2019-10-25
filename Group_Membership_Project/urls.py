@@ -1,0 +1,33 @@
+"""Group_Membership_Project URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/2.2/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path
+from grp_membership_app import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.index),
+    path('main', views.main),
+    path('register', views.register),
+    path('login', views.login),
+    path('groups', views.groups),
+    path('create_org', views.create_org),
+    path('groups/<group_id>', views.groupPage),
+    path('delete/<group_id>', views.deleteGroup),
+    path('join/<group_id>', views.joinGroup),
+    path('leave/<group_id>', views.leaveGroup),
+    path('logout', views.logout)
+]

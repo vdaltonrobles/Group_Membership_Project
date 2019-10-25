@@ -1,0 +1,36 @@
+*{
+	/* outline: 1px solid saddlebrown; */
+	margin: 0;
+	padding: 0;
+}
+.container{
+	width: 960px;
+	padding: 10px;
+	background-color: #DDE3FD;
+}
+button.btn.btn-primary{
+	background-color: #183BF0;
+}
+div.register{
+	display: inline-block;
+	width: 54%;
+}
+div.login{
+	display: inline-block;
+	width: 40%;
+    padding: 21px;
+	margin: 31px;
+}
+h2.register, h2.login{
+	color: #091034;
+}
+label.control-label.col-sm-2{
+	color: #0A2299;
+}
+.form-control{
+	background-color: #091034;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+}

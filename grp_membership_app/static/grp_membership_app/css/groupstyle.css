@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* outline: 1px solid chocolate; */
+}
+div.jumbotron{
+    background-color: #798EF6;
+    padding: 10px;
+    height: 100px;
+}
+.container{
+    background-color: #DDE3FD;
+}
+h2{
+    display: inline-block;
+    width: 90%;
+    margin-left: 5px;
+    color: ;
+}
+a{
+    background-color: #091034;
+    text-align: right;
+    font-weight: bold;
+}
+.groups{
+    display: inline-block;
+    width: 55%;
+    min-height: 600px;
+    background-color: #798EF6;
+}
+.form{
+    display: inline-block;
+    vertical-align: top;
+    width: 42%;
+    padding: 55px;
+    margin: 5px;
+    color: #091034;
+
+}
+.form-control{
+    font-size: 100px;
+}
+
+label{
+    margin-left: 4%;
+}
+
+p.grp_desc{
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+.btn-default{
+    float: right;
+    background-color: #798EF6  !important;
+    color: #091034 !important;
+    border-color: #091034 !important;
+    font-weight: bold;
+}
+ul.messages{
+	list-style-type: none;
+	padding: 0;
+}
+ul.join {
+	list-style-type: none;
+    padding: 0;
+    
+}
+ul.join li{
+    padding: 0 60px;
+}
+a.org.list{
+    color: #091034;
+}

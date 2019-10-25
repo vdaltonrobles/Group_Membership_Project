@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Groups</title>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<a href="/groups">Dashboard</a> | <a href="/logout">Logout</a>
+			</div>
+		<div>
+			{% for group in groupList %}
+				<h2>{{group.organization_name}}</h2>
+				{% if loggedInUser in group.member.all %}
+					<button><a href="/leave/{{group.id}}">Leave Group</a></button>
+				{% else %}
+					<button><a href="/join/{{group.id}}">Join Group</a></button>
+				{% endif %}
+				<p>{{group.description}}</p>
+				<h3>Created By: {{group.creator.firstname}} {{group.creator.lastname}}</h3>
+				<h3>Members:</h3>
+				{% for user in group.member.all %}
+					{%if user != group.creator%}
+						<p class="members">{{user.firstname}}</p>
+					{% endif %}
+				{% endfor %}
+			{% endfor%}
+		</div>
+	</div>
+</body>
+</html>
